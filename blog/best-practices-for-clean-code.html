@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices for Writing Clean Code - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">João</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/index.html" class="active">Blog</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="https://www.github.com/joaofix" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/joaofix/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <a href="/blog/index.html" class="back-link">← Back to Blog</a>
+
+        <article class="blog-post-content">
+            <header class="post-header">
+                <h1>Best Practices for Writing Clean Code</h1>
+                <div class="post-info">
+                    <span>Published on April 5, 2026</span> • <span>Reading time: 7 min</span>
+                </div>
+            </header>
+
+            <div class="post-body">
+                <p>
+                    Writing code is easy. Writing clean, maintainable code that others (and future you) 
+                    can understand is the real challenge. In this article, we'll explore the principles and 
+                    practices that separate good code from great code.
+                </p>
+
+                <h2>Why Clean Code Matters</h2>
+                <p>
+                    Clean code isn't just about aesthetics. It directly impacts:
+                </p>
+                <ul>
+                    <li>Readability - others can understand your code quickly</li>
+                    <li>Maintainability - bugs are easier to find and fix</li>
+                    <li>Scalability - your code is easier to extend</li>
+                    <li>Team productivity - less time spent deciphering code</li>
+                </ul>
+
+                <h2>Key Principles</h2>
+
+                <h3>1. Use Meaningful Names</h3>
+                <p>
+                    Variable, function, and class names should clearly express their purpose:
+                </p>
+                <pre><code>// Bad
+const d = new Date();
+const x = d.getTime();
+
+// Good
+const createdDate = new Date();
+const timestampInMillis = createdDate.getTime();</code></pre>
+
+                <h3>2. Keep Functions Small and Focused</h3>
+                <p>
+                    A function should do one thing and do it well. This makes testing easier and code 
+                    more reusable.
+                </p>
+
+                <h3>3. Write Comments That Explain "Why", Not "What"</h3>
+                <p>
+                    The code shows what it does. Comments should explain why you made that choice:
+                </p>
+                <pre><code>// Bad - redundant comment
+const age = currentYear - birthYear; // Calculate age
+
+// Good - explains the reasoning
+// Using current year minus birth year for simplicity,
+// though this doesn't account for birthdays
+const age = currentYear - birthYear;</code></pre>
+
+                <h3>4. DRY Principle (Don't Repeat Yourself)</h3>
+                <p>
+                    If you find yourself writing the same code multiple times, extract it into a reusable 
+                    function or module.
+                </p>
+
+                <h3>5. Keep It Simple (KISS Principle)</h3>
+                <p>
+                    Avoid over-engineering. Simple, straightforward code is almost always better than 
+                    clever, complex code.
+                </p>
+
+                <h2>Code Organization</h2>
+                <p>
+                    Structure matters. Here's a good approach:
+                </p>
+                <ul>
+                    <li>Group related functionality together</li>
+                    <li>Separate concerns (business logic from UI, for example)</li>
+                    <li>Use consistent file and folder structures</li>
+                    <li>Follow the conventions of your language/framework</li>
+                </ul>
+
+                <h2>Testing and Documentation</h2>
+                <p>
+                    Clean code is testable code. Write unit tests for your functions and keep your 
+                    documentation up to date. A well-documented function is easier to use correctly.
+                </p>
+
+                <h2>Conclusion</h2>
+                <p>
+                    Writing clean code is a journey, not a destination. Focus on these principles, 
+                    practice consistently, and review your code regularly. Over time, writing clean code 
+                    will become your default approach.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 João Almeida. All rights reserved.</p>
+    </footer>
+</body>
+</html>
